@@ -7,7 +7,7 @@ class ShipsController < ApplicationController
 
     def show 
         ship = Ship.find(params[:id])
-        render json: ship
+        render json: ship, include: [:pirates]
     end
 
 end
